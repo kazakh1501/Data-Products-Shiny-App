@@ -1,0 +1,63 @@
+Predict Miles Per Gallon (MPG) of Cars
+========================================================
+author: Cheong Kok Hoe
+date: 25 Apr 2015
+
+
+Background & Basic Data Analysis
+========================================================
+
+```{r echo=FALSE}
+library(car)
+library(datasets)
+
+data(mtcars)
+mtcars$am <- as.factor(mtcars$am)
+levels(mtcars$am) <- c("Automatic", "Manual")
+```
+The **mtcars** dataset in RStudio was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973-74 models).
+
+The dataset contains 
+- **`r dim(mtcars)[1]`** observations. 
+- **`r dim(mtcars)[2]`** variables.
+
+Building a Regression Model
+========================================================
+
+The sample of the observations in the **mtcars** dataset are
+```{r echo=FALSE}
+head(mtcars,1)
+```
+
+Using **am** (Transmission) as predictor, **wt** (Weight) and **hp** (horsepower) as confounders in the model.
+
+```{r echo=FALSE}
+bestmodel <- lm(mpg ~ am+wt+hp, data=mtcars)
+print(bestmodel)
+```
+
+Diagnostics of Regression Model
+========================================================
+
+The residual plots of the bestmodel multivariable regression model
+
+```{r, echo=FALSE}
+par(mfrow=c(2,2))
+plot(bestmodel)
+```
+
+Using Model to Predict MPG of Cars
+========================================================
+
+For example, 
+- **am** = "Automatic"
+- **wt** = "3.5"
+- **hp** = "120"
+```{r, echo=FALSE}
+inputvalue <- data.frame(am="Automatic", wt=3.5, hp=120)
+predictmpg <- signif(predict(bestmodel, inputvalue),3)
+```
+Predicted MPG = **`r predictmpg`**
+
+
+I want to try [Predict MPG of Cars!](https://kazakh1501.shinyapps.io/Project/)
