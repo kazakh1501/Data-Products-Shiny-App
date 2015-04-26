@@ -58,5 +58,5 @@ predictmpg <- signif(predict(bestmodel, inputvalue),3)
 ```
 Predicted MPG = **`r predictmpg`**
 
-If you ready, proceed to launch [Predict MPG of Cars!](https://kazakh1501.shinyapps.io/Project/)
+If you are ready, proceed to launch [Predict MPG of Cars!](https://kazakh1501.shinyapps.io/Project/)
 </small>

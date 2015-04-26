@@ -53,5 +53,5 @@ For example,
 
 Predicted MPG = **19.4**
 
-If you ready, proceed to launch [Predict MPG of Cars!](https://kazakh1501.shinyapps.io/Project/)
+If you are ready, proceed to launch [Predict MPG of Cars!](https://kazakh1501.shinyapps.io/Project/)
 </small>
