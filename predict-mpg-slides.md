@@ -16,16 +16,14 @@ The dataset contains
 
 Building a Regression Model
 ========================================================
-
+<small>
 The sample of the observations in the **mtcars** dataset are
 
 ```
           mpg cyl disp  hp drat   wt  qsec vs     am gear carb
 Mazda RX4  21   6  160 110  3.9 2.62 16.46  0 Manual    4    4
 ```
-
-Using **am** (Transmission) as predictor, **wt** (Weight) and **hp** (horsepower) as confounders in the model.
-
+Using **am** (Transmission) as predictor, **wt**(Weight) and **hp**(Horsepower) as confounders in the model.
 
 ```
 
@@ -36,23 +34,24 @@ Coefficients:
 (Intercept)     amManual           wt           hp  
    34.00288      2.08371     -2.87858     -0.03748  
 ```
+</small>
 
 Diagnostics of Regression Model
 ========================================================
-
+<small>
 The residual plots of the bestmodel multivariable regression model
-
+</small>
 ![plot of chunk unnamed-chunk-4](predict-mpg-slides-figure/unnamed-chunk-4-1.png) 
 
 Using Model to Predict MPG of Cars
 ========================================================
-
-For example, 
+<small>
+For example,
 - **am** = "Automatic"
 - **wt** = "3.5"
 - **hp** = "120"
 
 Predicted MPG = **19.4**
 
-
-I want to try [Predict MPG of Cars!](https://kazakh1501.shinyapps.io/Project/)
+If you ready, proceed to launch [Predict MPG of Cars!](https://kazakh1501.shinyapps.io/Project/)
+</small>

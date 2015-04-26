@@ -23,24 +23,23 @@ The dataset contains
 
 Building a Regression Model
 ========================================================
-
+<small>
 The sample of the observations in the **mtcars** dataset are
 ```{r echo=FALSE}
 head(mtcars,1)
 ```
-
-Using **am** (Transmission) as predictor, **wt** (Weight) and **hp** (horsepower) as confounders in the model.
-
+Using **am** (Transmission) as predictor, **wt**(Weight) and **hp**(Horsepower) as confounders in the model.
 ```{r echo=FALSE}
 bestmodel <- lm(mpg ~ am+wt+hp, data=mtcars)
 print(bestmodel)
 ```
+</small>
 
 Diagnostics of Regression Model
 ========================================================
-
+<small>
 The residual plots of the bestmodel multivariable regression model
-
+</small>
 ```{r, echo=FALSE}
 par(mfrow=c(2,2))
 plot(bestmodel)
@@ -48,8 +47,8 @@ plot(bestmodel)
 
 Using Model to Predict MPG of Cars
 ========================================================
-
-For example, 
+<small>
+For example,
 - **am** = "Automatic"
 - **wt** = "3.5"
 - **hp** = "120"
@@ -59,5 +58,5 @@ predictmpg <- signif(predict(bestmodel, inputvalue),3)
 ```
 Predicted MPG = **`r predictmpg`**
 
-
-I want to try [Predict MPG of Cars!](https://kazakh1501.shinyapps.io/Project/)
+If you ready, proceed to launch [Predict MPG of Cars!](https://kazakh1501.shinyapps.io/Project/)
+</small>
