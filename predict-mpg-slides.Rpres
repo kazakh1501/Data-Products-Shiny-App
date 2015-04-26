@@ -37,13 +37,13 @@ print(bestmodel)
 
 Diagnostics of Regression Model
 ========================================================
-<small>
-The residual plots of the bestmodel multivariable regression model
-</small>
 ```{r, echo=FALSE}
 par(mfrow=c(2,2))
 plot(bestmodel)
 ```
+<small>
+Residuals vs Fitted Plot. Relationship is linear and variances of error are highly equal. Normal Q-Q Plot. Data points are normally distributed.
+</small>
 
 Using Model to Predict MPG of Cars
 ========================================================

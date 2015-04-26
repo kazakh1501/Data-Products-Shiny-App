@@ -38,10 +38,10 @@ Coefficients:
 
 Diagnostics of Regression Model
 ========================================================
-<small>
-The residual plots of the bestmodel multivariable regression model
-</small>
 ![plot of chunk unnamed-chunk-4](predict-mpg-slides-figure/unnamed-chunk-4-1.png) 
+<small>
+Residuals vs Fitted Plot. Relationship is linear and variances of error are highly equal. Normal Q-Q Plot. Data points are normally distributed.
+</small>
 
 Using Model to Predict MPG of Cars
 ========================================================
